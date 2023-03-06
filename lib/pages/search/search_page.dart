@@ -56,7 +56,7 @@ class SearchPage {
 
         }
       }else {
-        SearchPage();
+        searchUser();
       }
     });
   }
