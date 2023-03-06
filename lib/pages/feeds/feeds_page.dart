@@ -36,19 +36,32 @@ class Feeds extends StateWidget {
           if(element.title==title){
             currentUser!.likePost(element);
             print('$title post liked!');
-            Feeds();
-            return;
           }
         });
         Feeds();
         return;
       }
       case 3:{
-
-      };break;
+        currentUser!.posts.forEach((element) {print(element);});
+        print('entry title for deleting post');
+        String title = io.text;
+        if(title.isEmpty){
+          print('title can not be empty');
+          Feeds();
+          return;
+        }
+        currentUser!.posts.forEach((element) {
+          if(element.title==title){
+            currentUser!.removePost(element);
+            print("post successful deleted!");
+          }
+        });
+        Feeds();
+        return;
+      }
       case 4:{
         HomePage();
-      };break;
+      }
     }
 
   }
