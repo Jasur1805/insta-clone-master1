@@ -35,12 +35,14 @@ class Feeds extends StateWidget {
         posts.forEach((element) {
           if(element.title==title){
             currentUser!.likePost(element);
+            print('$title post liked!');
             Feeds();
             return;
           }
         });
-
-      };break;
+        Feeds();
+        return;
+      }
       case 3:{
 
       };break;
