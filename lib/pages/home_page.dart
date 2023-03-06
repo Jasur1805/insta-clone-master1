@@ -1,6 +1,7 @@
 import '../services/io_service.dart';
 import 'profile/profile_page.dart';
 import 'search/search_page.dart';
+import '../pages/post_creating_page.dart';
 import 'state_widget.dart';
 
 class HomePage extends StateWidget {
@@ -30,7 +31,9 @@ class HomePage extends StateWidget {
         }
         break;
       case 3:
-        {}
+        {
+          CreatePost().build();
+        }
         break;
       case 4:
         {}

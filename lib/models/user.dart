@@ -131,4 +131,8 @@ class User implements Comparable<User> {
   bool unFollow(User user) {
     return followersList.remove(user);
   }
+
+  bool searchFollower(User user){
+    return followersList.contains(user);
+  }
 }
