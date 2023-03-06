@@ -2,6 +2,7 @@ import '../services/io_service.dart';
 import 'profile/profile_page.dart';
 import 'search/search_page.dart';
 import '../pages/post_creating_page.dart';
+import '../pages/feeds/like.dart';
 import 'state_widget.dart';
 
 class HomePage extends StateWidget {
@@ -27,7 +28,7 @@ class HomePage extends StateWidget {
         break;
       case 2:
         {
-          SearchPage().searchUser();
+          SearchPage().build();
         }
         break;
       case 3:
@@ -36,7 +37,9 @@ class HomePage extends StateWidget {
         }
         break;
       case 4:
-        {}
+        {
+          LikePosts().build();
+        }
         break;
       case 5:
         {

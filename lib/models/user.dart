@@ -15,7 +15,8 @@ class User implements Comparable<User> {
   String password;
   List<Post> _posts = [post1];
   int _age;
-  List<User> followersList = [];
+  List<User> _followersList = [];
+  List<Post> _likedPosts = [];
 
   static int _userCount = 0;
   static SortType sortType = SortType.name;
@@ -124,15 +125,35 @@ class User implements Comparable<User> {
     return _posts.remove(post);
   }
 
+  void showPosts(){
+    _posts.forEach((element) {print(element);});
+  }
+
   void addFollower(User user) {
-    followersList.add(user);
+    _followersList.add(user);
   }
 
   bool unFollow(User user) {
-    return followersList.remove(user);
+    return _followersList.remove(user);
+  }
+
+  void showFolloing(){
+    _followersList.forEach((element) {print(element);});
   }
 
   bool searchFollower(User user){
-    return followersList.contains(user);
+    return _followersList.contains(user);
   }
+
+  void likePost(Post post){
+    _likedPosts.add(post);
+  }
+  bool unLikePost(Post post){
+    return _likedPosts.remove(post);
+  }
+  void showLikedPosts(){
+    _likedPosts.forEach((element) {print(element);});
+  }
+
+
 }

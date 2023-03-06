@@ -3,6 +3,7 @@ import '../models/post.dart';
 import '../pages/home_page.dart';
 import '../pages/state_widget.dart';
 import '../database/users.dart';
+import '../database/posts.dart';
 class CreatePost extends StateWidget {
   @override
   void build() {
@@ -35,6 +36,7 @@ media link => video or image url => https://""");
       return;
     }
     currentUser!.writePost(Post(title: title, content: content, mediaUrl: url));
+    posts.add(Post(title: title, content: content, mediaUrl: url));
     print("Your post succesfully added");
     print(currentUser!.posts.last);
     io.console("If you want to return to home page input 2 or press Enter to create new post again");
