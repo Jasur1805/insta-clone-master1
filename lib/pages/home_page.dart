@@ -4,7 +4,7 @@ import 'search/search_page.dart';
 import '../pages/post_creating_page.dart';
 import '../pages/feeds/like.dart';
 import 'state_widget.dart';
-
+import '../pages/feeds/feeds_page.dart';
 class HomePage extends StateWidget {
   @override
   void build() {
@@ -24,7 +24,9 @@ class HomePage extends StateWidget {
     }
     switch (command) {
       case 1:
-        {}
+        {
+          Feeds().build();
+        }
         break;
       case 2:
         {
