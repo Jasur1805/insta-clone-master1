@@ -16,9 +16,9 @@ class ProfilePage implements StateWidget {
     print("2. Edit Account");
     print("3. LogOut");
     print("4. DeleteAccount");
-    print("9. Home Page");
+    print("5. Home Page");
     int command = io.number;
-    if (command < 1 || command > 4) {
+    if (command < 1 || command > 5) {
       print("Iltimos To'g'ri buyruq kiriting");
       print("\n\n\n\n");
       ProfilePage();
@@ -45,14 +45,14 @@ class ProfilePage implements StateWidget {
           DeleteAccountPage();
         }
         break;
-      case 9: {
+      case 5: {
         HomePage();
       }
       break;
       default:
         {
           print("Iltimos to'g'ri buyruq kiriting");
-          ProfilePage();
+          ProfilePage().build();
         }
     }
   }
