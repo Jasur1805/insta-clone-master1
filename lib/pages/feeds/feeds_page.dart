@@ -50,12 +50,13 @@ class Feeds extends StateWidget {
           Feeds();
           return;
         }
-        currentUser!.posts.forEach((element) {
+        for(var element in currentUser!.posts) {
           if(element.title==title){
             currentUser!.removePost(element);
             print("post successful deleted!");
+            break;
           }
-        });
+        }
         Feeds();
         return;
       }
