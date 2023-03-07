@@ -25,22 +25,22 @@ class HomePage extends StateWidget {
     switch (command) {
       case 1:
         {
-          Feeds().build();
+          Feeds();
         }
         break;
       case 2:
         {
-          SearchPage().build();
+          SearchPage();
         }
         break;
       case 3:
         {
-          CreatePost().build();
+          CreatePost();
         }
         break;
       case 4:
         {
-          LikePosts().build();
+          LikePosts();
         }
         break;
       case 5:

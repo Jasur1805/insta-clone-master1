@@ -146,12 +146,17 @@ class User implements Comparable<User> {
   }
 
   void likePost(Post post){
+    post.likeCount++;
     _likedPosts.add(post);
   }
   bool unLikePost(Post post){
     return _likedPosts.remove(post);
   }
   void showLikedPosts(){
+    if (_likedPosts.isEmpty) {
+      print("\n\nSorry for now you don't have liked posts\n\n");
+      return;
+    }
     _likedPosts.forEach((element) {print(element);});
   }
 
